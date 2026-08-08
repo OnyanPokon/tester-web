@@ -10,8 +10,8 @@
 
 | # | Feature Title | Target Component(s) | Status | Priority | GitHub Issue Link |
 | :---: | :--- | :--- | :---: | :---: | :---: |
-| **01** | **Core Cyber Design System & Shell Layout** | `index.css`, `MatrixBackground`, `Navbar` | 🟡 READY | `P0` | [Issue #1](https://github.com/OnyanPokon/tester-web/issues/1) |
-| **02** | **Synthetic Audio Engine Integration** | `src/utils/audio.js`, `Navbar` | ⏸️ BLOCKED | `P1` | [Issue #2](https://github.com/OnyanPokon/tester-web/issues/2) |
+| **01** | **Core Cyber Design System & Shell Layout** | `index.css`, `MatrixBackground`, `Navbar` | ✅ CLOSED | `P0` | [Issue #1](https://github.com/OnyanPokon/tester-web/issues/1) |
+| **02** | **Synthetic Audio Engine Integration** | `src/utils/audio.js`, `Navbar` | 🟡 READY | `P1` | [Issue #2](https://github.com/OnyanPokon/tester-web/issues/2) |
 | **03** | **Hero Section & System Specs (About)** | `Hero.jsx`, `About.jsx` | ⏸️ BLOCKED | `P1` | [Issue #3](https://github.com/OnyanPokon/tester-web/issues/3) |
 | **04** | **Interactive Skills Grid & Progress Bars** | `Skills.jsx` | ⏸️ BLOCKED | `P1` | [Issue #4](https://github.com/OnyanPokon/tester-web/issues/4) |
 | **05** | **Filterable Projects Showcase & Cyber Modal** | `Projects.jsx`, `ProjectModal.jsx` | ⏸️ BLOCKED | `P1` | [Issue #5](https://github.com/OnyanPokon/tester-web/issues/5) |
