@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Volume2, VolumeX, Terminal, Menu, X, Cpu } from 'lucide-react';
-import { soundFX } from '../utils/audio';
+import { useAudio } from '../hooks/useAudio';
 
 const NAV_ITEMS = [
   { id: 'hero', label: 'HOME', code: '01' },
@@ -12,7 +12,7 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar({ onToggleTerminal }) {
-  const [isMuted, setIsMuted] = useState(false);
+  const { isMuted, toggleMute, playClick, playHover, playModalOpen } = useAudio();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
@@ -39,15 +39,11 @@ export default function Navbar({ onToggleTerminal }) {
   }, []);
 
   const handleAudioToggle = () => {
-    const muted = soundFX.toggleMute();
-    setIsMuted(muted);
-    if (!muted) {
-      soundFX.playClick();
-    }
+    toggleMute();
   };
 
   const handleNavClick = (id) => {
-    soundFX.playClick();
+    playClick();
     setActiveSection(id);
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -206,9 +202,10 @@ export default function Navbar({ onToggleTerminal }) {
           <button
             type="button"
             onClick={() => {
-              soundFX.playClick();
+              playModalOpen();
               if (onToggleTerminal) onToggleTerminal();
             }}
+            onMouseEnter={playHover}
             className="cyber-btn"
             style={{
               padding: '6px 12px',
